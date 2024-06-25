@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.HelloController">
+    <Label fx:id="welcomeText" text="Welcome to JavaFX Application!" />
+    <TableView fx:id="productTable" prefHeight="200" prefWidth="400">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" />
+            <TableColumn fx:id="nameColumn" text="Name" />
+            <TableColumn fx:id="priceColumn" text="Price" />
+            <TableColumn fx:id="stockColumn" text="Stock" />
+        </columns>
+    </TableView>
+    <HBox spacing="10">
+        <VBox>
+            <Label text="New Product" />
+            <TextField fx:id="newProductName" promptText="Name" />
+            <TextField fx:id="newProductPrice" promptText="Price" />
+            <TextField fx:id="newProductStock" promptText="Stock" />
+            <Button text="Add Product" onAction="#onAddProductButtonClick" />
+        </VBox>
+        <VBox>
+            <Label text="Update Product" />
+            <TextField fx:id="updateProductName" promptText="Name" />
+            <TextField fx:id="updateProductPrice" promptText="Price" />
+            <TextField fx:id="updateProductStock" promptText="Stock" />
+            <Button text="Update Product" onAction="#onUpdateProductButtonClick" />
+        </VBox>
+    </HBox>
+    <Button text="Get All Products" onAction="#onGetAllButtonClick" />
+</VBox>
